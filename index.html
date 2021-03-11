@@ -1,262 +1,280 @@
-<!DOCTYPE html>
-<html>
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!doctype html>
+<html lang="zxx">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Home | TResults Mini Analyser </title>
+  <link rel="icon" href="assets/images/icon.png" type="image/gif" sizes="16x16">
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="assets/css/style-starter.css">
+  <!-- Template CSS -->
+  <link href="//fonts.googleapis.com/css?family=Muli:300,300i,400,500,600,700,800,900&display=swap" rel="stylesheet">
+  <link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,500,700,900&display=swap" rel="stylesheet">
+  <!-- Template CSS -->
+<style type="text/css">
+          .modal {
+              display: none; /* Hidden by default */
+              z-index: 1; /* Sit on top */
+              left: 0;
+              top: 0;
+              padding-right: 15%;
+              padding-top: 1%;
+              padding-left: 15%;
+              width: 100%; /* Full width */
+              height: 100%; /* Full height */
+              overflow: auto; /* Enable scroll if needed */
+              background-color: rgb(0,0,0); /* Fallback color */
+              background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            }
 
-    <title>Dashboard | TResults Mini Analyser</title>
-    <link rel="icon" href="assets/images/icon.png" type="image/gif" sizes="16x16">
-    <!-- Bootstrap CSS CDN -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <!-- Our Custom CSS -->
-    <!-- Scrollbar Custom CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
-    <!-- Font Awesome JS -->
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
-<link rel="stylesheet" type="text/css" href="./css/dashboard.css">
+
+            /* Modal Content/Box */
+            .modal-content {
+              background-color: #fefefe;
+              margin: 5% auto; /* 15% from the top and centered */
+              padding: 5%;
+              padding-right: 10%;
+              padding-left: 10%;
+              border: 1px solid #888;
+              width: 60%; /* Could be more or less, depending on screen size */
+            }
+
+            /* The Close Button */
+            .close {
+              color: #black;
+              float: right;
+              font-size: 28px;
+              font-weight: bold;
+            }
+
+            .close:hover,
+            .close:focus {
+              color: black;
+              text-decoration: none;
+              cursor: pointer;
+            }
+</style>
 </head>
+<body>
 
-<body >
+<!--/top-header-content-->
+<section class="w3l-top-header-content">
+  <div class="hny-top-menu">
+    <div class="top-hd">
+      <div class="container-fluid" style="background-color: #008081" >
+        <div class="row">
+          <ul class="social-top col-md-7">
+            <li class="log-link mr-3"><a id="inBtn" onClick='modalDisplay(event)'style="background-color: #003d3d" class="sign-in"><span class="fa fa-user"></span> Sign In</a></li>
+          </ul>
+          <ul class="accounts col-md-5">
+            <li class="top_li"><span class="fa fa-mobile"></span><a href="tel:+254726585423">+254 (0) 726585423</a>
+            </li>
 
-    <div class="wrapper">
-        <!-- Sidebar  -->
-        <nav id="sidebar">
-            <div id="dismiss">
-                <i class="fas fa-arrow-left"></i>
-            </div>
+            <li class="top_li mr-lg-0"><span class="fa fa-envelope-o"></span><a href="mailto:info@example.com">Need help? Contact Us </a>
 
-            <div class="sidebar-header">
-                <h3>TResults (Mini) Analyser</h3>
-            </div>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
 
-            <ul class="list-unstyled components">
-                <p>MAIN MENU</p>
-                <li class="active">     
-                                        <a href="#">MY PROFILE</a>
-                </li>
-                <li>
-                    <a href="#setSubmenu" data-toggle="collapse" aria-expanded="false">SETTINGS</a>
-                            <ul class="collapse list-unstyled" id="setSubmenu">
-                                <li>
-                                    <a href="#">Change Password</a>
-                                </li>
-                                <li>
-                                    <a href="#">Update Profile</a>
-                                </li>
-                                <li>
-                                    <a href="#">Dark Mode</a>
-                                </li>
-                            </ul>
-                </li>
-                <li>
-                 <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">LOG OUT</a>
-                </li>
-            </ul>
+  </div>
 
-            <ul class="list-unstyled CTAs">
-                                 <p>
-                                        &copy;2021 all rights reserved. Developed and maintained by Terrence Aluda
-                                 </p>
-            </ul>
-        </nav>
+</section>
+<!--//top-header-content-->
 
-        <!-- Page Content  -->
-        <div id="content">
+<!--w3l-banner-slider-main-->
+<section class="w3l-banner-slider-main">
 
-        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #008081">
-            <div class="container-fluid">
-                        <p>
+  <div class="bannerhny-content">
+    <header class="top-headerhny">
+      <!--/nav-->
+      <nav class="navbar navbar-expand-lg navbar-light fill">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <label class="lohny"><span style="color: red" class="fa fa-graduation-cap" aria-hidden="true"></span>T</label>Results</a>
+          <!-- if logo is image enable this   
+            <a class="navbar-brand" href="#index.html">
+              <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+            </a> -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </nav>
+      <!--//nav-->
+    </header>
 
-                        
-                                    <button style="z-index: 2" type="button" id="sidebarCollapse" class="btn btn-info">
-                                        <i class="fas fa-align-left"></i>
-                                        <span>Main Menu</span>
-                                    </button>
-                            <div class="d-flex justify-content-center" style="padding: 2%; text-align: center; background-color: #008081">            
-                                    <h1 style="color: white">TResults (Mini) Analyser</h1>
-                            </div>
-                        </p>
-            </div>
-        </nav>
-        <p>
-            <div id="resultsView" class="container" style="font-family: tahoma; min-width: 100%">
-                <div class="row">
-                <div class="col-sm-6 d-flex justify-content-around">
-                      <div class="container" style="margin-bottom: 5%">
-                        <div class="card" style="padding: 10%; padding-top: 6%">
-                            <h3 style="text-align: center; color: #008081">Students</h3>
-                <p>
-                          <div class="row">
-                            <div class=" card-group col-sm-6 d-flex justify-content-around" style="margin-bottom: 5%">
-                              <div class="card shadow bg-white border-light" style="max-width: 15rem">
-                              <div class="card-body" style="text-align: center; padding: 5%">
-                                            <!--<div class="col-sm-4 d-flex justify-content-evenly">
-                                                <img class="rounded" style="width: 200%" src="{{ '/picsavings.jpg' }}" alt="limit icon">
-                                            </div>-->
-                                            <!--<div class="col-sm-8">-->
-                                    <h6 class="card-title text-danger" style="font-weight: bold; font-size: 0.9rem">Total Number</h6>
-                                    <h6 class="card-text" style="font-size: 0.75rem"></h6></br>
-                                    <h6 id="showTotal" class="card-text" style="font-weight: bold; font-size: 0.9rem">0</h6>
-                                            <!--</div>-->
-                                </div>
-                              </div>
-                            </div>
-                            <div class="card-group col-sm-6 d-flex justify-content-around" style="margin-bottom: 5%">
-                              <div class="card card shadow bg-white border-light" style="max-width: 15rem">
-                              <div class="card-body" style="text-align: center; padding: 5%">
-                                    <h6 class="card-title text-danger" style="font-weight: bold; font-size: 0.9rem">Register New Student</h6></br>
-                                    <button type="button" id="regBtn" onClick='modalDisplay(event)' class="btn btn-dark">Click here</button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                                                    <div class="row">
-                            <div class=" card-group col-sm-6 d-flex justify-content-around" style="margin-bottom: 5%">
-                              <div class="card shadow bg-white border-light" style="max-width: 15rem">
-                              <div class="card-body" style="text-align: center; padding: 5%">
-                                            <!--<div class="col-sm-4 d-flex justify-content-evenly">
-                                                <img class="rounded" style="width: 200%" src="{{ '/picsavings.jpg' }}" alt="limit icon">
-                                            </div>-->
-                                            <!--<div class="col-sm-8">-->
-                                    <h6 class="card-title text-danger" style="font-weight: bold; font-size: 0.9rem">View Students</h6></br>
-                                    <button type="button" id="viewBtn" onclick='modalDisplay(event)' class="btn btn-dark">Click here</button>
-                                            <!--</div>-->
-                                </div>
-                              </div>
-                            </div>
-                            <div class="card-group col-sm-6 d-flex justify-content-around" style="margin-bottom: 5%">
-                              <div class="card card shadow bg-white border-light" style="max-width: 15rem">
-                              <div class="card-body" style="text-align: center; padding: 5%">
-                                    <h6 class="card-title text-danger" style="font-weight: bold; font-size: 0.9rem">Edit Student Details</h6></br>
-                                    <button type="button" disabled id="editBtn" onClick='modalDisplay(event)' class="btn btn-dark">Click here</button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                </p>
-                        </div>  
-                     </div>
+    <!--/banner-slider-->
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="container">
+            <div class="carousel-caption">
+
+              <h3>Motivated by the desire to Achieve</h3>
+              <p>They get their doubts solved instantly, 24x7</p>
+              <div class="button-4 mx-auto">
+                <div class="eff-4"></div>
+                <a href="services.html"> View Courses</a>
                 </div>
-                <div class="col-sm-6 d-flex justify-content-around">
-                      <div class="container" style="margin-bottom: 5%">
-                        <div class="card" style="padding: 10%; padding-top: 6%">
-                            <h3 style="text-align: center; color: #008081">Marks</h3>
-                  <p>
-                          <div class="row">
-                            <div class=" card-group col-sm-6 d-flex justify-content-around" style="margin-bottom: 5%">
-                              <div class="card shadow bg-white border-light" style="max-width: 15rem">
-                              <div class="card-body" style="text-align: center; padding: 5%">
-                                            <!--<div class="col-sm-4 d-flex justify-content-evenly">
-                                                <img class="rounded" style="width: 200%" src="{{ '/picsavings.jpg' }}" alt="limit icon">
-                                            </div>-->
-                                            <!--<div class="col-sm-8">-->
-                                    <h6 class="card-title text-danger" style="font-weight: bold; font-size: 0.9rem">Enter Marks</h6>
-                                    <h6 class="card-text" style="font-size: 0.75rem"></h6></br>
-                                    <button type="button" id="mkEntryBtn" onClick='modalDisplay(event)' class="btn btn-dark">Click here</button>
-                                            <!--</div>-->
-                                </div>
-                              </div>
-                            </div>
-                            <div class="card-group col-sm-6 d-flex justify-content-around" style="margin-bottom: 5%">
-                              <div class="card card shadow bg-white border-light" style="max-width: 15rem">
-                              <div class="card-body" style="text-align: center; padding: 5%">
-                                    <h6 class="card-title text-danger" style="font-weight: bold; font-size: 0.9rem">View Marks</h6></br>
-                                    <button type="button" id="mkViewBtn" onClick='modalDisplay(event)' class="btn btn-dark">Click here</button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                            <div class="row">
-                            <div class=" card-group col-sm-6 d-flex justify-content-around" style="margin-bottom: 5%">
-                              <div class="card shadow bg-white border-light" style="max-width: 15rem">
-                              <div class="card-body" style="text-align: center; padding: 5%">
-                                            <!--<div class="col-sm-4 d-flex justify-content-evenly">
-                                                <img class="rounded" style="width: 200%" src="{{ '/picsavings.jpg' }}" alt="limit icon">
-                                            </div>-->
-                                            <!--<div class="col-sm-8">-->
-                                    <h6 class="card-title text-danger" style="font-weight: bold; font-size: 0.9rem">Edit Marks</h6></br>
-                                    <button type="button" disabled id="mkEditBtn" onClick='modalDisplay(event)' class="btn btn-dark">Click here</button>
-                                            <!--</div>-->
-                                </div>
-                              </div>
-                            </div>
-                            <div class="card-group col-sm-6 d-flex justify-content-around" style="margin-bottom: 5%">
-                              <div class="card card shadow bg-white border-light" >
-                              <div class="card-body" style="text-align: center; padding: 5%">
-                                    <h6 class="card-title text-danger" style="font-weight: bold; font-size: 0.9rem">Reports</h6></br>
-                                    <button type="button" id="resultViewBtn" onClick='modalDisplay(event)' class="btn btn-dark">Click here</button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                  </p>
-                        </div>  
-                     </div>
+              
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item item2">
+          <div class="container">
+            <div class="carousel-caption">
+              <h3>One class can
+                change everything.</h3>
+              <p>We believe that every student is unique</p>
+              <div class="button-4 mx-auto">
+                <div class="eff-4"></div>
+                <a href="services.html"> View Courses</a>
                 </div>
-        </p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item item3">
+          <div class="container">
+            <div class="carousel-caption">
+              <h3>Motivated by the desire to Achieve</h3>
+              <p>They get their doubts solved instantly, 24x7</p>
+              <div class="button-4 mx-auto">
+                <div class="eff-4"></div>
+                <a href="services.html"> View Courses</a>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item item4">
+          <div class="container">
+            <div class="carousel-caption">
+              <h3>Better learning
+                for better results.</h3>
+              <p>We believe that every student is unique</p>
+              <div class="button-4 mx-auto">
+                <div class="eff-4"></div>
+                <a href="services.html"> View Courses</a>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+  </div>
+  <!--//banner-slider-->
+
+</section>
+
+<!-- footer -->
+<section class="w3l-footer-16">
+    <div class="w3l-footer-16-main py-5">
+        <div class="container">
+            <div class="d-flex below-section justify-content-between align-items-center pt-4 mt-5">
+                <div class="columns text-lg-left text-center">
+                    <p>© 2021. All rights reserved. Designed and maintained by Terrence Aluda
+                    </p>
+                </div>
+                <div class="columns-2 mt-md-0 mt-3">
+                    <ul class="social">
+                        <li><a href="#facebook"><span class="fa fa-facebook" aria-hidden="true"></span></a>
+                        </li>
+                        <li><a href="#linkedin"><span class="fa fa-linkedin" aria-hidden="true"></span></a>
+                        </li>
+                        <li><a href="#twitter"><span class="fa fa-twitter" aria-hidden="true"></span></a>
+                        </li>
+                        <li><a href="#google"><span class="fa fa-google-plus" aria-hidden="true"></span></a>
+                        </li>
+                        <li><a href="#github"><span class="fa fa-github" aria-hidden="true"></span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 
+    <!-- move top -->
+    <button onclick="topFunction()" id="movetop" title="Go to top">
+        <span class="fa fa-angle-up"></span>
+    </button>
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+            scrollFunction()
+        };
 
-            <div id="editBtnModal" class="modal">
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("movetop").style.display = "block";
+            } else {
+                document.getElementById("movetop").style.display = "none";
+            }
+        }
 
-              <!-- Modal content -->
-              <div class="modal-content">
-                <span class="close">&times;</span>
-                <form>
-                    <h3>Edit Student Details</h3>
-                      <div class="mb-3">
-                        <input type="text" placeholder="Admission Number" class="form-control" id="exampleInputPassword1">
-                      </div>
-                      <div class="mb-3">
-                        <input type="text" placeholder="First Name" class="form-control" id="exampleInputPassword1">
-                      </div>
-                      <div class="mb-3">
-                        <input type="text" placeholder="Last Name" class="form-control" id="exampleInputPassword1">
-                      </div>
-                      <div class="mb-3">
-                        <input type="text" placeholder="Admission Number" class="form-control" id="exampleInputPassword1">
-                      </div>
-                       <div class="mb-3">
-                        <select class="form-control">
-                            <option selected>Choose Gender</option>
-                            <option>Male</option>
-                            <option>Female</option>
-                        </select>
-                      </div>
-                      <div style="text-align: center;">
-                      <button type="submit" class="btn btn-danger">Save</button>
-                      </div>
-                </form>
-              </div>
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <!-- //move top -->
+    <script>
+        $(function () {
+            $('.navbar-toggler').click(function () {
+                $('body').toggleClass('noscroll');
+            })
+        });
+    </script>
+</section>
 
-            </div>
 
             <div id="regBtnModal" class="modal">
 
               <!-- Modal content -->
               <div class="modal-content">
-                    <h3>Student Registration</h3>
+                    <span class="close">&times;</span>
+                    <h3>Registration</h3>
                       <div class="mb-3">
-                        <input type="text" placeholder="First Name" class="form-control" id="name01">
-                      </div>
-                      <div class="mb-3">
-                        <input type="text" placeholder="Last Name" class="form-control" id="name02">
+                        <input type="text" placeholder="First Name" class="form-control" id="name1">
                       </div>
                       <div class="mb-3">
-                        <input type="text" placeholder="Admission Number" class="form-control" id="adm01">
+                        <input type="text" placeholder="Last Name" class="form-control" id="name2">
                       </div>
-                       <div class="mb-3">
-                        <select id="gender01" class="form-control">
-                            <option selected>Choose Gender</option>
-                            <option value='Male'>Male</option>
-                            <option value='Female'>Female</option>
-                        </select>
+                      <div class="mb-3">
+                        <input type="text" placeholder="Email" class="form-control" id="email1">
                       </div>
-                      <span id="alert02" class="badge bg-light text-danger"></span></h6><br>                      
+                      <div class="mb-3">
+                        <input type="password" placeholder="Enter Password" class="form-control" id="pass01">
+                      </div>
+                      <div class="mb-3">
+                        <input type="password" placeholder="Confirm Password" class="form-control" id="pass02">
+                      </div>
                       <div style="text-align: center;">
                       <button id="btn01" class="btn btn-danger">Register</button>
                       </div>
@@ -264,196 +282,101 @@
 
             </div>
 
-            <div id="mkEntryBtnModal" class="modal">
+            <div id="inBtnModal" class="modal">
 
               <!-- Modal content -->
               <div class="modal-content">
-                    <h3>Mark Entry</h3>
-                    <div class="mb-3">
-                        <select id="tm01" class="form-control">
-                            <option selected>Choose Term</option>
-                            <option value="One">One</option>
-                            <option value="Two">Two</option>
-                            <option Value="Three">Three</option>
-                        </select>
-                      </div>                   
+                    <span class="close">&times;</span>
+                    <h3>Sign in</h3>
                       <div class="mb-3">
-                        <select id="cat01" class="form-control">
-                            <option selected>Choose CAT</option>
-                            <option value="One">One</option>
-                            <option value="Two">Two</option>
-                            <option Value="Three">Three</option>
-                        </select>
+                        <input type="text" placeholder="Email" class="form-control" id="emailA1">
                       </div>
                       <div class="mb-3">
-                        <select id="sub01" class="form-control">
-                            <option selected>Choose Subject</option>
-                            <option value="english">English</option>
-                            <option value="kiswahili">Kiswahili</option>
-                            <option value="mathematics">Mathematics</option>
-                            <option value="chemistry">Chemistry</option>
-                            <option value="biology">Biology</option>
-                            <option value="physics">Physics</option>
-                            <option value="cre">CRE</option>
-                            <option value="history">History</option>
-                            <option value="agriculture">Agriculture</option>
-                            <option value="business">Business Studies</option>
-                            <option value="geo">Geography</option>
-                        </select>
+                        <input type="textn" placeholder="Password" class="form-control" id="passA1">
                       </div>
-                      <div id="showAdm" class="mb-3">
-                        <select class="form-control">
-                            <option selected>Select Admission number</option>
-                        </select>
-                      </div>
-                      <div class="mb-3">
-                        <input type="text" id="mk01" placeholder="Mark" class="form-control">
-                      </div>
-                      <span id="alert01" class="badge bg-light text-danger"></span></h6><br>
-
                       <div style="text-align: center;">
-                      <button id="btnSaveMark" class="btn btn-danger">Submit</button>
+                      <button id="btnLogin" class="btn btn-danger">Log in</button>
                       </div>
               </div>
 
             </div>
 
-            <div id="mkEditBtnModal" class="modal">
+</html>
 
-              <!-- Modal content -->
-              <div class="modal-content">
-                <form>
-                    <h3>Mark Edit</h3>
-                    <div class="mb-3">
-                        <select class="form-control">
-                            <option selected>Choose Term</option>
-                            <option>One</option>
-                            <option>Two</option>
-                            <option>Three</option>
-                        </select>
-                      </div>                   
-                      <div class="mb-3">
-                        <select class="form-control">
-                            <option selected>Choose CAT</option>
-                            <option>One</option>
-                            <option>Two</option>
-                            <option>Three</option>
-                        </select>
-                      </div>
-                      <div class="mb-3">
-                        <select class="form-control">
-                            <option selected>Select Admission number</option>
-                        </select>
-                      </div>
-                      <div class="mb-3">
-                        <input type="text" placeholder="Mark" class="form-control" id="exampleInputPassword1">
-                      </div>
-                      <div style="text-align: center;">
-                      <button type="submit" class="btn btn-danger">Save</button>
-                      </div>
-                </form>
-              </div>
-
-            </div>
-
-            <div id="viewBtnModal" class="modal ">
-
-              <!-- Modal content -->
-              <div id="showView" class="modal-content ">
-
-              </div>
-
-            </div>
-            <div id="mkViewBtnModal" class="modal">
-
-              <!-- Modal content -->
-              <div class="modal-content">
-                    <h3>Choose Term and Cat</h3>
-                    <div class="mb-3">
-                        <select id="tmV01" class="form-control">
-                            <option selected>Choose Term</option>
-                            <option value="One">One</option>
-                            <option value="Two">Two</option>
-                            <option Value="Three">Three</option>
-                        </select>
-                      </div>                   
-                      <div class="mb-3">
-                        <select id="catV01" class="form-control">
-                            <option selected>Choose CAT</option>
-                            <option value="One">One</option>
-                            <option value="Two">Two</option>
-                            <option Value="Three">Three</option>
-                        </select>
-                      </div>
-                      <div style="text-align: center;">
-                      <button id="btnViewMarks" class="btn btn-danger">View</button>
-                      </div>
-              </div>
-
-            </div> 
-            
-            <div id="resultViewBtnModal" class="modal">
-
-              <!-- Modal content -->
-              <div class="modal-content">
-                    <h3>Choose Term and Cat</h3>
-                    <div class="mb-3">
-                        <select id="tmRV01" class="form-control">
-                            <option selected>Choose Term</option>
-                            <option value="One">One</option>
-                            <option value="Two">Two</option>
-                            <option Value="Three">Three</option>
-                        </select>
-                      </div>                   
-                      <div class="mb-3">
-                        <select id="catRV01" class="form-control">
-                            <option selected>Choose CAT</option>
-                            <option value="One">One</option>
-                            <option value="Two">Two</option>
-                            <option Value="Three">Three</option>
-                            <option Value="General">All CATs</option>
-                        </select>
-                      </div>
-                      <div style="text-align: center;">
-                      <button id="btnRView" class="btn btn-danger">View</button>
-                      </div>
-              </div>
-
-            </div> 
-</body>
-<div class="overlay"></div>
-
-<!-- jQuery CDN - Slim version (=without AJAX) -->
-<script src="/ra/node_modules/jquery/dist/jquery.min.js"></script>
-<!-- Popper.JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-<!-- Bootstrap JS -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-<!-- jQuery Custom Scroller CDN -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
-
-<script type="text/javascript">
-    $(document).ready(function () {
-        $("#sidebar").mCustomScrollbar({
-            theme: "minimal"
-        });
-
-        $('#dismiss, .overlay').on('click', function () {
-            $('#sidebar').removeClass('active');
-            $('.overlay').removeClass('active');
-        });
-
-        $('#sidebarCollapse').on('click', function () {
-            $('#sidebar').addClass('active');
-            $('.overlay').addClass('active');
-            $('.collapse.in').toggleClass('in');
-            $('a[aria-expanded=true]').attr('aria-expanded', 'false');
-        });
-    });
+<script src="assets/js/jquery-3.3.1.min.js"></script>
+<!-- disable body scroll which navbar is in active -->
+<script>
+  $(function () {
+    $('.navbar-toggler').click(function () {
+      $('body').toggleClass('noscroll');
+    })
+  });
 </script>
-        <script type="text/javascript">
-// Get the modal
-            let span = document.getElementsByClassName("close")[0];
+<!--/filter-->
+<script>
+  $(document).ready(function () {
+
+    $(".filter-button").click(function () {
+      var value = $(this).attr('data-filter');
+
+      if (value == "all") {
+        //$('.filter').removeClass('hidden');
+        $('.filter').show('1000');
+      } else {
+        //            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
+        //            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
+        $(".filter").not('.' + value).hide('3000');
+        $('.filter').filter('.' + value).show('3000');
+
+      }
+    });
+
+  });
+</script>
+<!--//filter-->
+<!--pop-up-box-->
+
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $('.popup-with-zoom-anim').magnificPopup({
+      type: 'inline',
+
+      fixedContentPos: false,
+      fixedBgPos: true,
+
+      overflowY: 'auto',
+
+      closeBtnInside: true,
+      preloader: false,
+
+      midClick: true,
+      removalDelay: 300,
+      mainClass: 'my-mfp-zoom-in'
+    });
+
+    $('.popup-with-move-anim').magnificPopup({
+      type: 'inline',
+
+      fixedContentPos: false,
+      fixedBgPos: true,
+
+      overflowY: 'auto',
+
+      closeBtnInside: true,
+      preloader: false,
+
+      midClick: true,
+      removalDelay: 300,
+      mainClass: 'my-mfp-slide-bottom'
+    });
+  });
+</script>
+
+<!--//pop-up-box-->
+<script src="assets/js/bootstrap.min.js"></script>
+<script type="text/javascript">            
+  let span = document.getElementsByClassName("close")[0];
             var modal;
 
         function modalDisplay(event){
@@ -474,113 +397,44 @@
                 modal.style.display = "none";
               }
             }
+</script>
+<script src="/ra/node_modules/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript">
 
-    </script>
-  <script src="/ra/node_modules/jquery/dist/jquery.min.js"></script>
-  <script src="assets/js/jquery.table2excel.js"></script>
-  <script type="text/javascript">
-  
-              $(document).ready(function(){
-
-                $("#showTotal").load("/ra/backend/totalstudents.php");
-                $("#showAdm").load("/ra/backend/viewadmission.php");
-
-                $("#btn01").click(function(){
-                  var name01 = $("#name01").val();
-                  var name02 = $("#name02").val();
-                  var adm01 = $("#adm01").val();
-                  var gender01 = $("#gender01").val();
-                  $.post("/ra/backend/studentregistration.php",
-                      {
-                        first_name: name01,
-                        last_name: name02,
-                        admission: adm01,
-                        gender: gender01
-                      }, 
-                    function(result){
-                    $("#alert02").html(result);                      
-                    $("#name01").val('');
-                    $("#name02").val('');
-                    $("#adm01").val('');                                                            
-
-                  });
+            $(document).ready(function(){
+              $("#btn01").click(function(){
+                var name1 = $("#name1").val();
+                var name2 = $("#name2").val();
+                var email1 = $("#email1").val();
+                var pass01 = $("#pass01").val();
+                $.post("/ra/backend/register.php",
+                    {
+                      firstname: name1,
+                      lastname: name2,
+                      emailaddress: email1,
+                      password: pass01
+                    }, 
+                  function(result){
+                  $("#name1").val(result);
                 });
-
-                $("#viewBtn").click(function(){
-                    $("#showView").load("/ra/backend/viewstudents.php");
-                  });
-
-                  $("#btnSaveMark").click(function(){
-                  var tm01 = $("#tm01").val();
-                  var cat01 = $("#cat01").val();
-                  var sub01 = $("#sub01").val();
-                  var adm = $("#idMark01").val();
-                  var mk01 = $("#mk01").val();
-                  $.post("/ra/backend/markcontroller.php",
-                      {
-                        admission: adm,
-                        cat: cat01,
-                        term: tm01,
-                        subject: sub01,
-                        mark: mk01
-                      }, 
-                    function(result){
-                    $("#alert01").html(result);
-                    $("#mk01").val("");
-                  });
-                }); 
-
-                $("#btnViewMarks").click(function(){
-                  var term = $("#tmV01").val();
-                  var cat = $("#catV01").val();
-                  $.post("/ra/backend/viewmarks.php",
-                      {
-                        cat: cat,
-                        term: term
-                      }, 
-                    function(result){
-                    $("#resultsView").html(result);
-                  });
-                }); 
-
-                $("#btnRView").click(function(){
-                  var term = $("#tmRV01").val();
-                  var cat = $("#catRV01").val();
-                  $.post("/ra/backend/reports.php",
-                      {
-                        cat: cat,
-                        term: term
-                      }, 
-                    function(result){
-                    $("#resultsView").html(result);
-                  }).fail(function(jqXHR, textStatus, error){
-
-              console.log(error);
-
-});
-                }); 
- 
-    $("table").table2excel({ 
-        filename: "Students.xls" 
-    }); 
-                  
               });
-  </script>
-      <script src="assets/js/html2pdf.bundle.min.js"></script>
 
-      <script>
-        function generatePDF() {
-          let element = document.getElementById("0101");
-          let opt = {
-            margin:       1,
-              filename:     'report.pdf',
-              image:        { type: 'jpeg', quality: 1 },
-              //pagebreak: { after: '#sec' },
-              jsPDF:        { unit: 'cm', format: 'letter', orientation: 'landscape' }
-          };
-          html2pdf().set(opt).from(element).save();
-        }
-      </script>
-</body>
+              $("#btnLogin").click(function(){
+                var emailA1 = $("#emailA1").val();
+                var passA1 = $("#passA1").val();
+                $.post("/ra/backend/login.php",
+                    {
+                      email: emailA1,
+                      password: passA1
+                    }, 
+                  function(result){
+                    if((result)=="Access granted"){
+                      $("body").load("/ra/dashboard.html");
+                    }else{
+                      $("body").load("/ra/index.html");
+                    }
+                });
+              });
 
-</html>
+            });
+</script>
